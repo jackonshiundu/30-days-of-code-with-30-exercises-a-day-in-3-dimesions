@@ -1,0 +1,75 @@
+<!-- Write a JavaScript program to display a random image (clicking on a button) from the following list.
+ -->
+
+<html>
+  <head>
+    <!-- Declaring character encoding -->
+    <meta charset="utf-8" />
+    <!-- Setting title of the document -->
+    <title>Display a random image.</title>
+    <!-- Internal CSS styling -->
+    <style type="text/css">
+      /* Styling body to have margin at the top */
+      body {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <!-- Start of body section -->
+  <body>
+    <!-- Division containing a button triggering the display_random_image function on click -->
+    <div>
+      <button id="jsstyle" onclick="display_random_image();">Show Image</button>
+    </div>
+    <div id="image-container"></div>
+    <!-- End of body section -->
+  </body>
+  <script>
+    images = [
+      {
+        url: "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg",
+        width: "240",
+        height: "160",
+      },
+      {
+        url: "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg",
+        width: "320",
+        height: "195",
+      },
+      {
+        url: "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg",
+        width: "500",
+        height: "343",
+      },
+    ];
+    function display_random_image(params) {
+      let randomIndex = Math.floor(Math.random() * 5);
+      const randomImage = images[randomIndex];
+
+      // Create an <img> element
+      const imgElement = document.createElement("img");
+
+      // Set the src, width, and height attributes
+      imgElement.src = randomImage.url;
+      imgElement.width = randomImage.width;
+      imgElement.height = randomImage.height;
+
+      const imageContainer = document.getElementById("image-container");
+
+      // Clear the container before adding a new image
+      imageContainer.innerHTML = "";
+
+      // Append the new image to the container
+      imageContainer.appendChild(imgElement);
+    }
+  </script>
+  <!-- End of HTML document -->
+</html>
+<!--
+this is how you set attributes of a tag
+
+   imgElement.src = randomImage.url;
+      imgElement.width = randomImage.width;
+      imgElement.height = randomImage.height;
+
+-->

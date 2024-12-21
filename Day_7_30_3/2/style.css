@@ -1,0 +1,16 @@
+/* Make the button container 50% of the body width */
+#btns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(3, 48px); /* 3 rows */
+  gap: 10px;
+  width: 50%;
+  margin: 50px auto; /* Center the grid */
+}
+
+/* Styling for each button */
+button {
+  width: 100%;
+  height: 48px;
+  font-size: 24px;
+}

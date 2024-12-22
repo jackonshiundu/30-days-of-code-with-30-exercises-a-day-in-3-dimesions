@@ -1,0 +1,15 @@
+<ul id="list">
+  <li>Hello1</li>
+  <li>Hello2</li>
+  <li>Hello3</li>
+</ul>
+
+<script>
+  document.getElementById("list").addEventListener("click", (e) => {
+    console.log(e);
+    if (e.target.nodeName === "LI") {
+      console.log(e.target.nodeName);
+      console.log(e.target.textContent);
+    }
+  });
+</script>

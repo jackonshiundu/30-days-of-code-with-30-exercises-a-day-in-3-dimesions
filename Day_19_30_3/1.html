@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .slideshow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+      }
+
+      .slideshow img {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slideshow">
+      <button id="previousBtn">Previous</button>
+      <img id="image" src="image1.jpg" />
+      <button id="nextBtn">Next</button>
+    </div>
+    <script>
+      let prev = document.getElementById("previousBtn");
+      let next = document.getElementById("nextBtn");
+      let image = document.getElementById("image");
+      let Images = [
+        "https://cdn.shopify.com/s/files/1/0071/5004/3187/files/Unknown-1_680d19fb-9f5c-4f93-be45-5c05206789e7.jpg?v=1669352164",
+        "https://www.format.com/wp-content/uploads/nathanael_asaro_wildlife_photography_1.jpg.webp",
+        "https://images.squarespace-cdn.com/content/v1/59e25db4cd0f687c797da1b5/1626772657000-WLO3KIBXY9W3D3V32RQ9/Wildlife+Photography+by+Kathy+Karn+01.jpg?format=1500w",
+        "https://ajkenyasafaris.com/wp-content/uploads/2023/10/image1-1024x683.png.webp",
+        "https://i0.wp.com/rethinkbiologynotes.com/wp-content/uploads/2023/02/asian-elephant-family.jpg?w=860&ssl=1",
+      ];
+      let currentIndex = 0;
+      prev.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + Images.length) % Images.length;
+        image.src = Images[currentIndex];
+      });
+      next.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % Images.length;
+        image.src = Images[currentIndex];
+      });
+    </script>
+  </body>
+</html>

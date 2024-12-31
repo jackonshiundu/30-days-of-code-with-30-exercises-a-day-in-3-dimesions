@@ -23,7 +23,7 @@ function asyncOperation3() {
     setTimeout(() => {
       console.log("Asynchronous Operation 3");
       resolve();
-    }, 1500);
+    }, 3000);
   });
 }
 

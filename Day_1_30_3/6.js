@@ -6,9 +6,9 @@ const wrong_json_fomat = (jsonString) => {
     console.log("parsed Jaon", parsed_json);
   } catch (error) {
     if (error instanceof SyntaxError) {
-      console.log("SyntaxError:", error.message);
+      return console.log("SyntaxError:", error.message);
     }
     console.log("Error:", error.message);
   }
 };
-wrong_json_fomat('{"name": "Rowan Octave", "age": 30}');
+wrong_json_fomat({ name: "Rowan Octave", age: 30 });

@@ -43,12 +43,13 @@
       },
     ];
     function display_random_image(params) {
-      let randomIndex = Math.floor(Math.random() * 5);
+      let randomIndex = Math.floor(Math.random() * 6);
       const randomImage = images[randomIndex];
 
       // Create an <img> element
       const imgElement = document.createElement("img");
-
+      console.log(randomIndex);
+      console.log(randomImage);
       // Set the src, width, and height attributes
       imgElement.src = randomImage.url;
       imgElement.width = randomImage.width;

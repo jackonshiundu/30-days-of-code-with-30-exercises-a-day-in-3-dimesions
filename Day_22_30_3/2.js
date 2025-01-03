@@ -30,3 +30,4 @@ const bifurcatedStrings = bifurcateStrings(strings);
 console.log(bifurcatedStrings);
 
 //The condition if (str.localeCompare(referenceString) <= 0): str.localeCompare(referenceString) returns a number. When this is less than or equal to 0: The string str is either equal to or alphabetically comes before the referenceString (in this case, the string at the middle index). If this condition is true, the string str is pushed into the firstHalf array (i.e., the group of strings that are alphabetically less than or equal to the referenceString). Otherwise, the string is added to the secondHalf array (i.e., the group of strings that are alphabetically greater than the referenceString).
+

@@ -7,7 +7,7 @@ function UserProvider({ children }) {
 
   const value = {
     name,
-    changeName: () => setName("Jane Doe"),
+    changeName: (name) => setName(name),
   };
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
@@ -19,7 +19,7 @@ function ChildComponent() {
   return (
     <div>
       <p>Name: {name}</p>
-      <button onClick={changeName}>Change Name</button>
+      <button onClick={(e) => changeName(e.target.value)}>Change Name</button>
     </div>
   );
 }

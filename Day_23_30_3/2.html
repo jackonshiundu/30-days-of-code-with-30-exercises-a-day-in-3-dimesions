@@ -1,0 +1,36 @@
+//event bubbling
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubbling Example</title>
+  </head>
+  <body>
+    <div id="parent" style="padding: 50px; border: 2px solid black">
+      Parent Div
+      <div id="child" style="padding: 50px; border: 2px solid red">
+        Child Div (Click Me)
+      </div>
+    </div>
+
+    <script>
+      // Event listener on the child element
+      document
+        .getElementById("child")
+        .addEventListener("click", function (event) {
+          alert("Child Div Clicked");
+        });
+
+      // Event listener on the parent element
+      document
+        .getElementById("parent")
+        .addEventListener("click", function (event) {
+          alert("Parent Div Clicked");
+        });
+    </script>
+  </body>
+</html>
+
+<!-- Use event.stopPropagation() to prevent the event from bubbling up the DOM tree.
+ -->

@@ -1,17 +1,19 @@
 //date format
 
 const date = new Date();
-const formattedDate = new Intl.DateTimeFormat("de-DE").format(date); // Displays as month/day/year
+const formattedDate = new Intl.DateTimeFormat("en-Us").format(date); // Displays as month/day/year
 console.log(formattedDate);
+const formattedNUmber = new Intl.NumberFormat("en-Us").format(2124132534); // Displays as month/day/year
+console.log(formattedNUmber);
 
-console.log(date.getFullYear()); // Year
+/* console.log(date.getFullYear()); // Year
 console.log(date.getMonth()); // Month (0-11, so January is 0)
 console.log(date.getDate()); // Day of the month (1-31)
 console.log(date.getHours()); // Hours (0-23)
 console.log(date.getMinutes()); // Minutes (0-59)
 console.log(date.getSeconds()); // Seconds (0-59)
 console.log(date.getMilliseconds()); // Milliseconds (0-999)
-
+ */
 /*
 Diffrent formats that can be used under that
 "en-US": English (United States)

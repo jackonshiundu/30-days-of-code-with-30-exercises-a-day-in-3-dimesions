@@ -33,5 +33,6 @@ function getMEtheTheStringWithANumber(arr) {
   String_number_Array = arr.filter((x) => /\d/.test(x));
   return String_number_Array;
 }
-console.log(getMEtheTheStringWithANumber(["a2bc", "ab10c", "a10bc", "bcd"]));
+//console.log(getMEtheTheStringWithANumber(["a2bc", "ab10c", "a10bc", "bcd"]));
 //3
+console.log(/\d/.test("m4e"));

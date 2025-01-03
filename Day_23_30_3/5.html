@@ -1,0 +1,35 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blur() Example</title>
+  </head>
+  <body>
+    <input type="text" id="name" placeholder="Enter your name" />
+    <button onclick="removeFocus()">Click to blur the input</button>
+
+    <script>
+      function removeFocus() {
+        document.getElementById("name").blur(); // Remove focus from the input field
+      }
+    </script>
+  </body>
+</html>
+
+ -->
+
+<input type="text" id="email" placeholder="Enter your email" />
+<script>
+  const input = document.getElementById("email");
+
+  // Listen for when the input loses focus
+  input.addEventListener("blur", () => {
+    alert("Input field lost focus");
+  });
+
+  // After 2 seconds, blur the input field programmatically
+  setTimeout(() => {
+    input.blur(); // This will trigger the 'blur' event
+  }, 2000);
+</script>

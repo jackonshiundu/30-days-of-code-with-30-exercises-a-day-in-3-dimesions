@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop the Balloons</title>
+    <style>
+      li {
+        width: 100px;
+        height: 100px;
+        background-color: #ff6347; /* Tomato color */
+        margin: 10px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 100px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="list">
+      <li>Balloon 1</li>
+      <li>Balloon 2</li>
+      <li>Balloon 3</li>
+      <li>Balloon 4</li>
+      <li>Balloon 5</li>
+      <li>Balloon 6</li>
+      <li>Balloon 7</li>
+      <li>Balloon 8</li>
+      <li>Balloon 9</li>
+      <li>Balloon 10</li>
+    </ul>
+
+    <script>
+      // Get the 'ul' element by its id
+      const list = document.getElementById("list");
+
+      // Add a 'mouseover' event listener to the parent element (ul)
+      list.addEventListener("mouseover", function (event) {
+        // Check if the target of the event is an 'li' element
+        if (event.target.nodeName === "LI") {
+          // Hide the balloon (li) that was hovered over
+          event.target.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

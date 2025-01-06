@@ -43,3 +43,12 @@ console.log(b.map((e) => 7));
 //didyoulknow
 console.log(1 + +"2" + "2"); //output 32
 //The + operator in front of a string ("2") is used to convert the string to a number.
+
+//4
+["zebra", "horse"].forEach(function (k) {
+  d[k] = undefined;
+});
+
+/* expected output
+d['zebra'] = undefined
+d['horse'] = undefined */

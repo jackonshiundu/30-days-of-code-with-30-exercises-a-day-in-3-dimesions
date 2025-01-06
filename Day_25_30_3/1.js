@@ -52,3 +52,9 @@ console.log(1 + +"2" + "2"); //output 32
 /* expected output
 d['zebra'] = undefined
 d['horse'] = undefined */
+
+//hot tip
+function isPalindrome(str) {
+  str = str.replace(/\W/g, "").toLowerCase();
+  return str == str.split("").reverse().join("");
+}

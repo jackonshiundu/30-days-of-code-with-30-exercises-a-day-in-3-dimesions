@@ -9,7 +9,7 @@
 }
 const isEven = (num) => num % 2 === 0;
 console.log(groupArrays([2, 3, 4, 5, 6, 7, 845, 67, 7654, 9], isEven));
- */
+ */ z;
 //2
 
 function getoddAndEven(aray, condition) {

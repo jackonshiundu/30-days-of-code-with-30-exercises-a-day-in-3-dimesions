@@ -2,8 +2,8 @@
 Answer: Object.defineProperty allows you to define a new property directly on an object or modify an existing property. You can control the property's configuration such as its value, writability, enumerability, and configurability. */
 
 let obj = {};
-Object.defineProperty(obj, "key", {
-  value: "value",
+Object.defineProperty(obj, "hello", {
+  value: "Word",
   writable: true,
   enumerable: true,
   configurable: true,
@@ -11,7 +11,7 @@ Object.defineProperty(obj, "key", {
 
 console.log(obj.key); // 'value'
 // Change the value of the key
-obj.key = "newValue";
+obj.hello = "Hello World";
 console.log(obj.key); // 'newValue' because writable: true
 
 // Delete the key

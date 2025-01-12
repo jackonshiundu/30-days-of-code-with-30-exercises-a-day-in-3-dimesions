@@ -1,4 +1,4 @@
-/* Here is the text from the image you sent:
+/*
 
 Question:
 
